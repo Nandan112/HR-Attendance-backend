@@ -4,9 +4,9 @@
   "main": "server.js",
   "seed": "node scripts/seed.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node scripts/seed.js"
+  "start": "node server.js",
+    "dev": "nodemon server.js",
+    "vercel-build": "npm install"
   },
   "author": "",
   "license": "ISC",
