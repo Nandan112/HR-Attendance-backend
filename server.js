@@ -104,11 +104,9 @@ const limiter = rateLimit({
 
 // Middleware
 app.use(helmet());
-const cors = require("cors");
 
 app.use(cors({
   origin: "https://hr-sma.vercel.app",
-  credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
