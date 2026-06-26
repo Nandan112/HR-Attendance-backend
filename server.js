@@ -105,7 +105,7 @@ const limiter = rateLimit({
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin: "https://hr-attendance-14gp1.vercel.app",
+  origin: "https://hr-sma.vercel.app",
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
