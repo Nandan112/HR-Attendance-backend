@@ -148,7 +148,7 @@ if (require.main === module) {
     })
     .catch(err => {
       console.error('❌ MongoDB Error:', err);
-      setTimeout(() => process.exit(1), 1000);
+      setTimeout(() => process.exit(1), 3000);
     });
 }
 
