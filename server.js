@@ -132,12 +132,12 @@ app.use((req, res) => res.status(404).json({ success: false, message: `Route ${r
 // Error handler
 app.use(errorHandler);
 
-// ✅ MongoDB connection (only if not in Vercel serverless)
-if (process.env.NODE_ENV !== 'production') {
-  mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('✅ MongoDB connected'))
-    .catch(err => console.error('❌ MongoDB Error:', err));
-}
+const Mongos_url = "mongodb+srv://RestauBillNewUser:RestauBillNewUser@restrobill.drjis.mongodb.net/HR?retryWrites=true&w=majority&appName=Restrobill";
+
+// Condition hatao - sabhi environments mein connect karo
+mongoose.connect(Mongos_url)
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.error('❌ MongoDB Error:', err));
 
 // ✅ Only start server if not on Vercel
 if (require.main === module) {
